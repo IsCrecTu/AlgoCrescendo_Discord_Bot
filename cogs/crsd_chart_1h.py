@@ -14,7 +14,7 @@ class CRSDChart1H(commands.Cog):
 
     @slash_command(guild_ids=guild_id_config, name="crsdchart1h", description="Show 1 Hour CRSD Chart on TinyChart (updated every 15 minutes)")
     async def crsdchart1h(self, ctx):
-        await ctx.respond(file=discord.File(static_file_location + 'crsd_chart_4H.png'))
+        await ctx.respond(file=discord.File(static_file_location + 'crsd_chart_1H.png'))
 
     @crsdchart1h.error
     async def crsdchart1h_error(self, ctx: Context, error):
