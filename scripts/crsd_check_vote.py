@@ -63,6 +63,7 @@ for x in range(totaltransactions):
             note_stripped = note_decode_string.translate(translation_table)
 
             #Check CRSD balance
+            crescendo_balance = 0 # Just in case a wallet had opted-out of the CRSD ASA
             account_balance = myindexer.account_info(address=response['transactions'][x]['sender'])
             totalasa = len(account_balance['account']['assets'])
             for y in range(totalasa):
@@ -85,6 +86,7 @@ for x in range(totaltransactions):
             note_stripped_alg = note_decode_string_alg.translate(translation_table)
 
             #Check CRSD balance
+            crescendo_balance_alg = 0 # Just in case a wallet had opted-out of the CRSD ASA
             account_balance_alg = myindexer.account_info(address=response['transactions'][x]['sender'])
             totalasa_alg = len(account_balance_alg['account']['assets'])
             for y in range(totalasa_alg):
